@@ -32,6 +32,8 @@ body {
   color: #fff;
   cursor: pointer;
   position: relative;
+
+  transition: flex 0.7s ease-in;
 }
 
 .panel h3 {
@@ -39,8 +41,15 @@ body {
   position: absolute;
   left: 20px;
   bottom: 20px;
+  opacity: 0;
 }
 
 .panel.active {
   flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  /* putting transition here will hide the other text immediately */
+  transition: opacity 0.3s ease-in 0.4s;
 }
