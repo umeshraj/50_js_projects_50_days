@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,4 +18,25 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+}
+
+.progress-container {
+  display: flex;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  border: 3px solid var(--line-border-empty);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
 }
