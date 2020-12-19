@@ -22,6 +22,9 @@ body {
 
 .progress-container {
   display: flex;
+  width: 350px;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .circle {
