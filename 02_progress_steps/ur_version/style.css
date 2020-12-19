@@ -20,6 +20,10 @@ body {
   overflow: hidden;
 }
 
+.container {
+  text-align: center;
+}
+
 .progress-container {
   display: flex;
   width: 350px;
