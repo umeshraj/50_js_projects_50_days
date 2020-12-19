@@ -28,17 +28,6 @@ body {
   position: relative;
 }
 
-.progress-bar {
-  background-color: var(--line-border-fill);
-  height: 4px;
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-
 .circle {
   background-color: #fff;
   color: #999;
@@ -54,4 +43,27 @@ body {
 
 .circle.active {
   border-color: var(--line-border-fill);
+}
+
+.progress-bar {
+  background-color: var(--line-border-fill);
+  height: 4px;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--line-border-empty);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
 }
