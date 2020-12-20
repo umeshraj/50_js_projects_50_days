@@ -52,7 +52,7 @@ body {
 .progress-bar {
   background-color: var(--line-border-fill);
   height: 4px;
-  width: 50%;
+  width: 0%;
   position: absolute;
   top: 50%;
   left: 0;
