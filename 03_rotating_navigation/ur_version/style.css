@@ -22,6 +22,41 @@ body {
   transform: rotate(-20deg);
 }
 
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  background-color: gray;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: transparent;
+  border: 1px;
+  font-size: 26px;
+  color: #fff;
+  /* height: 100px; */
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.content {
+  margin: 50px auto;
+}
+
 img {
   max-width: 100%;
 }
