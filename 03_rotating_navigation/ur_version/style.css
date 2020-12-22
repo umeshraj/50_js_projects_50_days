@@ -26,7 +26,6 @@ body {
   position: fixed;
   top: -100px;
   left: -100px;
-  background-color: gray;
 }
 
 .circle {
@@ -43,14 +42,28 @@ body {
   left: 50%;
   top: 50%;
   background: transparent;
-  border: 1px;
+  border: 0;
   font-size: 26px;
   color: #fff;
-  /* height: 100px; */
+  height: 100px;
 }
 
 .circle button:focus {
   outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
 }
 
 .content {
