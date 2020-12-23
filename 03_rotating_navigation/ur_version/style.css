@@ -67,13 +67,23 @@ body {
 }
 
 .content {
+  max-width: 800px;
   margin: 50px auto;
 }
 
-img {
+.content img {
   max-width: 100%;
 }
 
 .content h1 {
   margin: 0;
+}
+
+/* navivation */
+nav {
+  position: fixed;
+  color: black;
+  left: 0;
+  bottom: 40px;
+  z-index: 100;
 }
