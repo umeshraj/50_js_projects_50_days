@@ -118,10 +118,12 @@ nav ul li i {
 
 nav ul li + li {
   margin-left: 15px;
+  transform: translateX(-150%);
 }
 
 nav ul li + li + li {
   margin-left: 30px;
+  transform: translateX(-200%);
 }
 
 /* note important to use + since nav is outside container */
