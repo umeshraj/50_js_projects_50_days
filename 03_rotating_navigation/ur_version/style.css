@@ -123,3 +123,8 @@ nav ul li + li {
 nav ul li + li + li {
   margin-left: 30px;
 }
+
+/* note important to use + since nav is outside container */
+.container.show-nav + nav li {
+  transform: translateX(0);
+}
