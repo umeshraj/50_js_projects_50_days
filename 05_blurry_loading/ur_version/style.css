@@ -26,8 +26,12 @@ body {
 
   position: absolute;
 
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   z-index: -1;
-  filter: blur(0px);
+  filter: blur(30px);
+  left: -30px;
+  top: -30px;
+  height: calc(100vh + 30px);
+  width: calc(100vw + 30px);
 }
