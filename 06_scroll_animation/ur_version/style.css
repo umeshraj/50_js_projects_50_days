@@ -23,4 +23,17 @@ body {
   justify-content: center;
   margin: 10px;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.box:nth-of-type(odd) {
+  transform: translateX(-100%);
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(+100%);
+}
+
+.box.show {
+  transform: translateX(0);
 }
