@@ -45,6 +45,7 @@ h1 {
   background-size: cover;
   /* avoid text from overflowing when 25% hover */
   overflow: hidden;
+  transition: width var(--speed) ease-in-out;
 }
 
 .split.left {
