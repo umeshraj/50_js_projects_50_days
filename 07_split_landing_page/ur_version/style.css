@@ -19,22 +19,18 @@ body {
 .split {
   position: absolute;
   width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .split.left {
   left: 0;
   background-image: url("./ps.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
 }
 
 .split.right {
   right: 0;
   background-image: url(./xbox.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
 }
