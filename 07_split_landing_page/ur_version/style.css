@@ -40,6 +40,8 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* avoid text from overflowing when 25% hover */
+  overflow: hidden;
 }
 
 .split.left {
