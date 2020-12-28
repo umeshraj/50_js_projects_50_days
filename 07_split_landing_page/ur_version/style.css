@@ -14,6 +14,16 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
 .container {
   background: #333;
   height: 100vh;
@@ -37,7 +47,7 @@ body {
 
 .split.right {
   right: 0;
-  background-image: url(./xbox.jpg);
+  background-image: url("./xbox.jpg");
 }
 
 .split.left::before {
