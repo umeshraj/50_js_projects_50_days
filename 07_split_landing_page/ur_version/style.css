@@ -58,7 +58,7 @@ h1 {
   background-color: var(--left-bg-color);
 }
 
-.split.right::after {
+.split.right::before {
   content: "";
   position: absolute;
   width: 100%;
