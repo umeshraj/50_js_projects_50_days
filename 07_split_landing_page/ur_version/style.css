@@ -65,3 +65,20 @@ h1 {
   height: 100%;
   background-color: var(--right-bg-color);
 }
+
+.btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
