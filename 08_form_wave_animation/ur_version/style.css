@@ -24,6 +24,7 @@ body {
 
 .container h1 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .container a {
@@ -59,6 +60,18 @@ body {
 .form-control {
   position: relative;
   margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
 }
 
 .form-control input:focus {
