@@ -31,6 +31,7 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   width: 80px;
   padding: 20px;
+  transition: width 1s linear;
 }
 
 nav.active {
@@ -43,6 +44,7 @@ nav ul {
   margin: 0;
   padding: 0;
   width: 0;
+  transition: width 1s linear;
 }
 
 nav.active ul {
@@ -52,6 +54,7 @@ nav.active ul {
 nav ul li {
   transform: rotateY(0deg);
   opacity: 0;
+  transition: transform 1s linear, opacity 1s linear;
 }
 
 nav.active ul li {
@@ -85,9 +88,18 @@ nav ul a {
   position: absolute;
   top: 10px;
   left: 5px;
+  transition: transform 1s linear;
 }
 
 .icon .line2 {
   top: auto;
   bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(45deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(-45deg) translateY(-5.5px);
 }
