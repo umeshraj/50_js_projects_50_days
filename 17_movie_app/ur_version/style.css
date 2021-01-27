@@ -15,3 +15,20 @@ header {
   display: flex;
   justify-content: flex-end;
 }
+
+.search {
+  background-color: transparent;
+  padding: 0.5rem;
+  color: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.search::placeholder {
+  color: #fff;
+}
+
+.search:focus {
+  outline: none;
+  background-color: rgb(235, 178, 178);
+}
