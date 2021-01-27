@@ -32,3 +32,61 @@ header {
   outline: none;
   background-color: rgb(235, 178, 178);
 }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: rgb(243, 181, 181);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.movie-info span {
+  font-weight: bold;
+  background-color: rgb(245, 195, 195);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+.movie-info span.green {
+  color: green;
+}
+
+.movie-info span.orane {
+  color: orane;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease;
+}
+
+.movie:hover .overview {
+  transform: translateY(0%);
+}
