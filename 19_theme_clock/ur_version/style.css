@@ -5,6 +5,16 @@
   --secondary-color: #fff;
 }
 
+html.dark {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
 * {
   box-sizing: border-box;
 }
