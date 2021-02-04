@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap");
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -36,7 +41,7 @@ body {
 .needle {
   width: 3px;
   height: 65px;
-  background-color: black;
+  background-color: var(--primary-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,4 +61,27 @@ body {
   background-color: red;
   height: 100px;
   transform: translate(-50%, -100%) rotate(30deg);
+}
+
+.center-point {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: "";
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
