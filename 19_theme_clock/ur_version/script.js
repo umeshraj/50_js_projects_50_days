@@ -15,3 +15,17 @@ toggleEl.addEventListener("click", (e) => {
     e.target.innerHTML = "Light mode";
   }
 });
+
+function setTime() {
+  const time = new Date();
+  const month = time.getMonth();
+  const date = time.getDate();
+  const day = time.getDay();
+
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+
+  const hoursForClock = hourEl % 12;
+  const ampm = hours >= 12 ? "PM" : "AM";
+}
