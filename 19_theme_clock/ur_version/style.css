@@ -6,8 +6,8 @@
 }
 
 html.dark {
-  --primary-color: #000;
-  --secondary-color: #fff;
+  --primary-color: #fff;
+  --secondary-color: #333;
 }
 
 html.dark {
