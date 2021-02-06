@@ -63,9 +63,9 @@ function setTime() {
   // set arms of clock
   const hoursDeg = scale(hours, 0, 11, 0, 360);
   hourEl.style.transform = `translate(-50%, -100%) rotate(${hoursDeg}deg)`;
-  const minutesDeg = scale(minutes, 0, 59, 0, 360, minutes);
+  const minutesDeg = scale(minutes, 0, 59, 0, 360);
   minuteEl.style.transform = `translate(-50%, -100%) rotate(${minutesDeg}deg)`;
-  const secondsDeg = scale(seconds, 0, 59, 0, 360, seconds);
+  const secondsDeg = scale(seconds, 0, 59, 0, 360);
   secondEl.style.transform = `translate(-50%, -100%) rotate(${secondsDeg}deg)`;
 }
 
