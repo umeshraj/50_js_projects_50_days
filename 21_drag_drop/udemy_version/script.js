@@ -29,10 +29,12 @@ function dragOver(e) {
 
 function dragEnter(e) {
   e.preventDefault();
+  this.classList.add("hovered");
 }
 
 function dragLeave() {
   console.log("Drag leave");
+  this.classList.remove("hovered");
 }
 
 function dragDrop() {
