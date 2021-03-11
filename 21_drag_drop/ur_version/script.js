@@ -4,6 +4,13 @@ const empties = document.querySelectorAll(".empty");
 fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
 
+for (const empty of empties) {
+  //   empty.addEventListener("dragover", dragOver);
+  empty.addEventListener("dragenter", dragEnter);
+  empty.addEventListener("dragleave", dragLeave);
+  //   empty.addEventListener("drop", dragDrop);
+}
+
 function dragStart() {
   this.classList.add("hold");
   setTimeout(() => {
@@ -15,13 +22,13 @@ function dragEnd() {
   this.className = "fill";
 }
 
-// function dragStart() {
-//   console.log("drag");
-// }
+function dragEnter() {
+  this.classList.add("hovered");
+}
 
-// function dragStart() {
-//   console.log("drag");
-// }
+function dragLeave() {
+  this.classList.remove("hovered");
+}
 
 // function dragStart() {
 //   console.log("drag");
