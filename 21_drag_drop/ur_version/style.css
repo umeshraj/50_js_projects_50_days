@@ -25,3 +25,13 @@ body {
   width: 145px;
   cursor: move;
 }
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: #fff;
+  border-style: dashed;
+}
