@@ -3,6 +3,7 @@ const colorEl = document.getElementById("color");
 const sizeEl = document.getElementById("size");
 const increaseEl = document.getElementById("increase");
 const decreaseEl = document.getElementById("decrease");
+const clearEl = document.getElementById("clear");
 
 const ctx = canvas.getContext("2d");
 let isPressed = false;
@@ -69,4 +70,8 @@ decreaseEl.addEventListener("click", () => {
   size -= 5;
   size = size <= 0 ? 5 : size;
   updateSizeOnScreen();
+});
+
+clearEl.addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
