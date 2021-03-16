@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.kinetic{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border: 1px solid maroon
+}
+
+.kinetic::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border: 40px solid transparent;
+    border-bottom-color: #fff;
+}
