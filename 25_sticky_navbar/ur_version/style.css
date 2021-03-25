@@ -46,6 +46,21 @@ body {
   padding: 7px 15px;
 }
 
+/* flip nav on scroll */
+.nav.active {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a {
+  color: #000;
+}
+
+.nav.active .container {
+  padding: 10px 0;
+}
+
+/* move it here to show red links after nav:active */
 .nav a.current,
 .nav a:hover {
   color: #c0392b;
