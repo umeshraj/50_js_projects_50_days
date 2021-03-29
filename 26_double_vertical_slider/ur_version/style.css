@@ -10,11 +10,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.slide-container {
+.slider-container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .left-slide {
