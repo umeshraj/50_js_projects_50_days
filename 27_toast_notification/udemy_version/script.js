@@ -8,12 +8,15 @@ const messages = [
   "Message Four",
 ];
 
-button.addEventListener("click", createNotification);
+button.addEventListener("click", () => {
+  createNotification("This is invalid data", "success");
+});
 
-function createNotification() {
+function createNotification(message = null, type = null) {
   const notif = document.createElement("div");
   notif.classList.add("toast");
-  notif.innerText = getRandomMessage();
+  notif.classList.add(type || "info");
+  notif.innerText = message || getRandomMessage();
 
   toasts.appendChild(notif);
   setTimeout(() => {
