@@ -21,6 +21,7 @@ body {
 }
 
 .user-form input {
+  background-color: lightgreen;
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -28,4 +29,47 @@ body {
   margin-bottom: 2rem;
   font-family: inherit;
   font-size: 1rem;
+}
+
+.card {
+  max-width: 800px;
+  background-color: lightgreen;
+  border-radius: 20px;
+  display: flex;
+  padding: 3rem;
+  color: darkgreen;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid gray;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  margin-left: 2rem;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  padding: 0;
+}
+
+.repo {
+  text-decoration: none;
+  color: darkgreen;
+  background-color: goldenrod;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
 }
