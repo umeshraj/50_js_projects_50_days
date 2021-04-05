@@ -59,6 +59,11 @@ body {
   padding: 0;
 }
 
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-right: 0.6rem;
+}
+
 .repo {
   text-decoration: none;
   color: darkgreen;

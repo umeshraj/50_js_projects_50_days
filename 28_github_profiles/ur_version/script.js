@@ -1,6 +1,7 @@
 const APIURL = "https://api.github.com/users/";
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const main = document.getElementById("main");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -12,6 +13,62 @@ form.addEventListener("submit", (e) => {
 });
 
 async function getUser(username) {
-  const { data } = await axios(APIURL + username);
-  console.log(data);
+  try {
+    const { data } = await axios(APIURL + username);
+    createUserCard(data);
+    getRepos(username);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function createUserCard(user) {
+  const cardHTML = `
+  <div class="card">
+      
+      <div class="user-img">
+        <img
+          src="${user.avatar_url}"
+          alt=""
+          class="avatar"
+        />
+      </div>
+      
+      <div class="user-info">
+        <h2>${user.name}</h2>
+        <p>${user.bio}</p>
+        <ul>
+        <li>${user.followers} <strong>Followers</strong></li>
+        <li>${user.following} <strong>Following</strong></li>
+        <li>${user.public_repos} <strong>Repos</strong></li>
+        </ul>
+
+        <div id="repos">
+        </div>
+      </div>
+    </div>
+  `;
+  main.innerHTML = cardHTML;
+}
+
+async function getRepos(username) {
+  try {
+    const { data } = await axios(APIURL + username + "/repos?sort=created");
+    addReposToCard(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function addReposToCard(repos) {
+  const reposEl = document.getElementById("repos");
+  repos.slice(0, 10).forEach((repo) => {
+    const repoEl = document.createElement("a");
+    repoEl.classList.add("repo");
+    repoEl.href = repo.html_url;
+    repoEl.target = "_blank";
+    repoEl.innerText = repo.name;
+
+    reposEl.appendChild(repoEl);
+  });
 }
