@@ -18,7 +18,7 @@ async function getUser(username) {
     createUserCard(data);
     getRepos(username);
   } catch (err) {
-    console.log(err);
+    createErrorCard("No profile with this username");
   }
 }
 
@@ -56,7 +56,7 @@ async function getRepos(username) {
     const { data } = await axios(APIURL + username + "/repos?sort=created");
     addReposToCard(data);
   } catch (err) {
-    console.log(err);
+    createErrorCard("Problem fetching repos");
   }
 }
 
@@ -71,4 +71,13 @@ function addReposToCard(repos) {
 
     reposEl.appendChild(repoEl);
   });
+}
+
+function createErrorCard(msg) {
+  const cardHTML = `
+    <div class="class">
+      <h1>${msg}</h1>
+    </div>
+  `;
+  main.innerHTML = cardHTML;
 }
