@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.loveMe {
+  background: url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80");
+  height: 400px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.loveMe .fa-heart {
+  position: absolute;
+}
