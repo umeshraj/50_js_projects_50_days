@@ -24,5 +24,13 @@ body {
 
 .loveMe .fa-heart {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 1s linear;
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
 }

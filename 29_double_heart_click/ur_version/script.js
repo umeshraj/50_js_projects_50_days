@@ -23,4 +23,9 @@ function createHeart(e) {
   heart.style.left = `${xInside}px`;
 
   loveMe.appendChild(heart);
+
+  // remove heart after 2s
+  setTimeout(() => {
+    heart.remove();
+  }, 2000);
 }
