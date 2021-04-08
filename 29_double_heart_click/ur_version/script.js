@@ -1,6 +1,8 @@
 const loveMe = document.querySelector(".loveMe");
 const times = document.getElementById("times");
 
+let timesClicked = 0;
+
 loveMe.addEventListener("dblclick", (e) => {
   createHeart(e);
 });
@@ -28,4 +30,8 @@ function createHeart(e) {
   setTimeout(() => {
     heart.remove();
   }, 2000);
+
+  // update times clicked
+  timesClicked += 1;
+  times.innerHTML = timesClicked;
 }
