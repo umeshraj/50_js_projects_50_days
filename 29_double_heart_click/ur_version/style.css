@@ -24,4 +24,5 @@ body {
 
 .loveMe .fa-heart {
   position: absolute;
+  transform: translate(-50%, -50%);
 }
