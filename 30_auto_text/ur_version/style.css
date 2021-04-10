@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   background-color: darksalmon;
   margin: 0;
   display: flex;
@@ -25,4 +26,12 @@ div {
 input {
   background-color: darksalmon;
   border: none;
+  padding: 5px;
+  /* width: 50px; */
+  font-size: 18px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
 }
