@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darksalmon;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+div {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input {
+  background-color: darksalmon;
+  border: none;
+}
