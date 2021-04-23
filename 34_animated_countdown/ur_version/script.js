@@ -5,6 +5,11 @@ const replay = document.getElementById("replay");
 
 runAnimation();
 
+replay.addEventListener("click", () => {
+  resetDOM();
+  runAnimation();
+});
+
 function runAnimation() {
   const nextToLast = nums.length - 1;
 
@@ -21,4 +26,14 @@ function runAnimation() {
       }
     });
   });
+}
+
+function resetDOM() {
+  counter.classList.remove("hide");
+  finalMessage.classList.remove("show");
+
+  nums.forEach((num) => {
+    num.classList.value = "";
+  });
+  nums[0].classList.add("in");
 }
