@@ -32,6 +32,6 @@ body {
   transition: 2s ease;
 }
 
-.square {
+.square:hover {
   transition-duration: 0s;
 }
