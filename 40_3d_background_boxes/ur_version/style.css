@@ -39,6 +39,10 @@ body {
   width: 600px;
 }
 
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
 .box {
   background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
   background-repeat: no-repeat;
@@ -46,4 +50,5 @@ body {
   position: relative;
   height: 125px;
   width: 125px;
+  transition: 0.4s ease;
 }
