@@ -12,10 +12,43 @@
     />
     <!-- personal css -->
     <link rel="stylesheet" href="style.css" />
-    <title>My Project</title>
+    <title>UI Feedback</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div id="panel" class="panel-container">
+      <strong
+        >How satisfied are you <br />
+        with our product?</strong
+      >
+      <div class="ratings-container">
+        <div class="rating">
+          <img
+            src="https://image.flaticon.com/icons/svg/187/187150.svg"
+            alt=""
+          />
+          <small>Unhappy</small>
+        </div>
+
+        <div class="rating">
+          <img
+            src="https://image.flaticon.com/icons/svg/187/187136.svg"
+            alt=""
+          />
+          <small>Neutral</small>
+        </div>
+
+        <div class="rating active">
+          <img
+            src="https://image.flaticon.com/icons/svg/187/187133.svg"
+            alt=""
+          />
+          <small>Satisfied</small>
+        </div>
+      </div>
+
+      <!-- button -->
+      <button class="btn" id="send">Send Review</button>
+    </div>
 
     <!-- JS -->
     <script src="script.js"></script>
