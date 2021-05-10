@@ -62,7 +62,7 @@ body {
 }
 
 .rating:hover small,
-.rating:active small {
+.rating.active small {
   color: #111;
 }
 
