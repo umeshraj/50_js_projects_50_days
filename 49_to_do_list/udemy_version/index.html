@@ -12,10 +12,24 @@
     />
     <!-- personal css -->
     <link rel="stylesheet" href="style.css" />
-    <title>My Project</title>
+    <title>To Do List</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <h1>todos</h1>
+    <form id="form">
+      <input
+        type="text"
+        id="input"
+        class="input"
+        placeholder="Enter your todo"
+        autocomplete="off"
+      />
+      <ul class="todos" id="todos">
+        <li>My first todo</li>
+        <li class="completed">My second todo</li>
+      </ul>
+    </form>
+    <small>Left click to toggle completed. <br />Right click to delete.</small>
 
     <!-- JS -->
     <script src="script.js"></script>
