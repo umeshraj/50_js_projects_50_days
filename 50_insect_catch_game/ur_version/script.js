@@ -2,9 +2,11 @@ const screens = document.querySelectorAll(".screen");
 const start_btn = document.getElementById("start-btn");
 const choose_insect_btns = document.querySelectorAll(".choose-insect-btn");
 const game_container = document.getElementById("game-container");
+const scoreEl = document.getElementById("score");
 
 // globals
 let selected_insect = {};
+let score = 0;
 
 start_btn.addEventListener("click", () => {
   screens[0].classList.add("up");
@@ -34,7 +36,7 @@ function createInsect() {
     selected_insect.alt
   }" style="transform:rotate(${Math.random() * 360}deg)">`;
 
-  //   insect.addEventListener("click", catchInsect);
+  insect.addEventListener("click", catchInsect);
   game_container.appendChild(insect);
 }
 
@@ -45,4 +47,20 @@ function getRandomLocation() {
   const x = Math.random() * (width - 200) + 100;
   const y = Math.random() * (height - 200) + 100;
   return { x, y };
+}
+
+function catchInsect() {
+  increaseScore();
+  this.classList.add("caught");
+  setTimeout(() => this.remove(), 2000);
+  //   addInsects()
+}
+
+function increaseScore() {
+  score++;
+  scoreEl.innerHTML = `Score: ${score}`;
+
+  if (score > 5) {
+    message.classList.add("visible");
+  }
 }

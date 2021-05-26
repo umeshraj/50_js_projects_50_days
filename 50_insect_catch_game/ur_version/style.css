@@ -122,11 +122,12 @@ body {
   height: 100px;
   position: absolute;
   cursor: pointer;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .insect.caught {
-  scale: 0;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .insect img {
