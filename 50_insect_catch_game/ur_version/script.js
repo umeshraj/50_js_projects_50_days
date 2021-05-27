@@ -3,10 +3,13 @@ const start_btn = document.getElementById("start-btn");
 const choose_insect_btns = document.querySelectorAll(".choose-insect-btn");
 const game_container = document.getElementById("game-container");
 const scoreEl = document.getElementById("score");
+const timeEl = document.getElementById("time");
+const message = document.getElementById("message");
 
 // globals
 let selected_insect = {};
 let score = 0;
+let seconds = 0;
 
 start_btn.addEventListener("click", () => {
   screens[0].classList.add("up");
@@ -22,9 +25,23 @@ choose_insect_btns.forEach((btn) => {
 
     // add new insect to screen
     setTimeout(createInsect, 1000);
-    // startGame();
+    startGame();
   });
 });
+
+function startGame() {
+  setInterval(increaseTime, 1000);
+}
+
+function increaseTime() {
+  let m = Math.floor(seconds / 60);
+  let s = seconds % 60;
+  m = m < 10 ? `0${m}` : m;
+  s = s < 10 ? `0${s}` : s;
+
+  timeEl.innerHTML = `Time: ${m}:${s}`;
+  seconds++;
+}
 
 function createInsect() {
   const insect = document.createElement("div");
@@ -53,7 +70,7 @@ function catchInsect() {
   increaseScore();
   this.classList.add("caught");
   setTimeout(() => this.remove(), 2000);
-  //   addInsects()
+  addInsects();
 }
 
 function increaseScore() {
@@ -63,4 +80,9 @@ function increaseScore() {
   if (score > 5) {
     message.classList.add("visible");
   }
+}
+
+function addInsects() {
+  setTimeout(createInsect, 1000);
+  setTimeout(createInsect, 1500);
 }
